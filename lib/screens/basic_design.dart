@@ -1,4 +1,8 @@
+// ignore_for_file: deprecated_member_use
+
+//import 'dart:io';
 import 'package:flutter/material.dart';
+//import 'package:url_launcher/url_launcher.dart';
 
 class BasicDesignScreen extends StatelessWidget {
 
@@ -51,17 +55,25 @@ class Title extends StatelessWidget {
 }
 
 class ButtonSection extends StatelessWidget {
+  
   const ButtonSection({
     Key? key,
   }) : super(key: key);
 
+
   @override
   Widget build(BuildContext context) {
+    //final String whatsapp = "whatsapp://send?phone=+50255746377&text=${Uri.encodeComponent('https://www.m2guate.com/Guatemala/Apartamento/Renta/Zona-15/13183/M2Guate-R8700-Apartamento-en-Renta-Guatemala-Zona-15')}";
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 50, vertical: 10),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: const [
+        children: [
+          /*TextButton(
+            onPressed: (() async{
+              //launch(whatsapp);
+            }), child: Text('Whatsapp'),
+          ),*/
           CustomButton(text: 'Call', icon: Icons.call),
           CustomButton(text: 'Route', icon: Icons.route),
           CustomButton(text: 'Share', icon: Icons.share),
@@ -89,3 +101,4 @@ class CustomButton extends StatelessWidget {
     );
   }
 }
+
